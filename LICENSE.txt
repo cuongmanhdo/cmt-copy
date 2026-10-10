@@ -1,0 +1,121 @@
+﻿CMT Copy 2.3.2 — Điều khoản sử dụng / Terms of Use
+Bản tiếng Việt trước, bản tiếng Anh sau. Vietnamese first, English below.
+Đây là nguyên văn điều khoản người dùng phải đồng ý khi cài đặt và khi chạy lần đầu.
+This is the exact text users accept in the installer and on first run.
+Thành phần của bên thứ ba / Third-party components: xem THIRD_PARTY_NOTICES.md (đầy đủ hơn mục tương ứng bên dưới / more complete than the section below).
+
+==============================================================================
+
+ĐIỀU KHOẢN SỬ DỤNG VÀ MIỄN TRỪ TRÁCH NHIỆM
+Phần mềm CMT Copy — phiên bản 2.2
+
+Vui lòng đọc kỹ toàn bộ điều khoản dưới đây trước khi cài đặt hoặc sử dụng phần mềm. Việc cài đặt, sao chép hoặc sử dụng phần mềm đồng nghĩa với việc bạn đã đọc, hiểu và đồng ý với các điều khoản này. Nếu không đồng ý, vui lòng không cài đặt và không sử dụng phần mềm.
+
+1. CHỦ SỞ HỮU BẢN QUYỀN
+Phần mềm CMT Copy, bao gồm chương trình, mã nguồn, giao diện, biểu tượng và tài liệu đi kèm, thuộc quyền sở hữu của:
+Công ty Cổ phần Giải pháp Máy tính Việt Nam (Vietnam Computer Solutions JSC)
+Trung tâm Khôi phục Dữ liệu Bách Khoa — BKRECOVER
+Website: https://recoverdata.com.vn
+Phần mềm được bảo hộ theo pháp luật Việt Nam về sở hữu trí tuệ và các điều ước quốc tế có liên quan. Mọi quyền không được cấp rõ ràng trong văn bản này đều thuộc về chủ sở hữu.
+
+2. PHẠM VI SỬ DỤNG
+Phần mềm được cung cấp MIỄN PHÍ, chỉ dành cho mục đích NGHIÊN CỨU VÀ HỌC TẬP, phi thương mại. Trong phạm vi đó, bạn được phép:
+- Cài đặt và sử dụng phần mềm trên các máy tính của mình;
+- Sao chép và chia sẻ bộ cài nguyên vẹn, không thu phí, kèm đầy đủ điều khoản này.
+
+3. CÁC HÀNH VI KHÔNG ĐƯỢC PHÉP
+Nếu không có sự chấp thuận bằng văn bản của chủ sở hữu, bạn không được:
+- Sử dụng phần mềm vào mục đích thương mại, bao gồm bán, cho thuê, cung cấp dịch vụ có thu phí dựa trên phần mềm hoặc tích hợp vào sản phẩm thương mại;
+- Sửa đổi, dịch ngược, giải mã hoặc tháo rời phần mềm, trừ trường hợp pháp luật cho phép;
+- Xóa hoặc thay đổi thông tin bản quyền, nhãn hiệu hoặc điều khoản này;
+- Phân phối phần mềm đã bị chỉnh sửa, hoặc đóng gói phần mềm kèm mã độc.
+
+4. MIỄN TRỪ BẢO ĐẢM
+Phần mềm được cung cấp "NGUYÊN TRẠNG" (AS IS) và "TÙY KHẢ NĂNG SẴN CÓ", không kèm bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý, bao gồm nhưng không giới hạn ở bảo đảm về khả năng thương mại, sự phù hợp cho một mục đích cụ thể, tính chính xác, tính liên tục hoặc việc không vi phạm quyền của bên thứ ba. Chủ sở hữu không bảo đảm rằng phần mềm không có lỗi hoặc hoạt động không bị gián đoạn.
+
+5. GIỚI HẠN TRÁCH NHIỆM
+Trong phạm vi tối đa pháp luật cho phép, chủ sở hữu, người phát triển và đơn vị phân phối không chịu trách nhiệm pháp lý hay bồi thường đối với bất kỳ thiệt hại nào — trực tiếp, gián tiếp, ngẫu nhiên, đặc biệt hoặc hệ quả — phát sinh từ việc sử dụng hoặc không thể sử dụng phần mềm, cũng như đối với các lỗi mà người dùng gặp phải, bao gồm nhưng không giới hạn ở: mất mát, hư hỏng, ghi đè hoặc rò rỉ dữ liệu; gián đoạn công việc; hư hỏng phần cứng hoặc hệ thống; tổn thất lợi nhuận — kể cả khi đã được thông báo về khả năng xảy ra thiệt hại đó.
+
+6. TRÁCH NHIỆM CỦA NGƯỜI DÙNG
+- Tự sao lưu dữ liệu quan trọng trước khi sao chép, di chuyển hoặc ghi đè;
+- Kiểm tra kết quả sau khi sao chép, đặc biệt khi dùng chế độ "Di chuyển" hoặc "Ghi đè";
+- Chỉ sao chép dữ liệu mà bạn có quyền hợp pháp, và tự chịu trách nhiệm về nội dung dữ liệu cũng như việc tuân thủ pháp luật hiện hành.
+
+7. QUYỀN RIÊNG TƯ
+Phần mềm không thu thập và không gửi ra ngoài bất kỳ dữ liệu cá nhân hay nội dung tệp nào của bạn. Nhật ký hoạt động chỉ được lưu trên máy của bạn tại %LOCALAPPDATA%\CMT Copy\cmtcopy.log.
+
+8. THAY ĐỔI VÀ CHẤM DỨT
+Chủ sở hữu có thể thay đổi điều khoản này ở các phiên bản sau. Quyền sử dụng của bạn tự động chấm dứt nếu bạn vi phạm điều khoản; khi đó bạn phải gỡ bỏ và xóa mọi bản sao của phần mềm.
+
+9. LUẬT ÁP DỤNG
+Điều khoản này được điều chỉnh theo pháp luật nước Cộng hòa Xã hội Chủ nghĩa Việt Nam. Tranh chấp phát sinh trước hết được giải quyết bằng thương lượng; nếu không thành, tranh chấp được giải quyết tại cơ quan có thẩm quyền theo quy định của pháp luật Việt Nam.
+
+10. LIÊN HỆ
+Để được cấp phép sử dụng cho mục đích thương mại hoặc cần hỗ trợ, vui lòng liên hệ BKRECOVER qua website https://recoverdata.com.vn.
+
+THÀNH PHẦN CỦA BÊN THỨ BA
+Phần mềm được biên dịch bằng bộ công cụ GCC / MinGW-w64 và liên kết tĩnh các thư viện thời chạy dưới đây. Mỗi thư viện thuộc bản quyền của tác giả tương ứng và tuân theo giấy phép riêng:
+- Thư viện chuẩn C++ (libstdc++) và thư viện hỗ trợ GCC (libgcc): GNU GPL phiên bản 3 kèm GCC Runtime Library Exception 3.1. Điều khoản ngoại lệ này cho phép phân phối chương trình đã biên dịch theo điều khoản do nhà phát triển lựa chọn.
+- Thư viện thời chạy mingw-w64 (CRT): Zope Public License 2.1 và các phần thuộc phạm vi công cộng.
+Bộ cài đặt được tạo bằng WiX Toolset và sử dụng giao diện WixUI, phát hành theo Microsoft Reciprocal License (MS-RL).
+Văn bản đầy đủ của các giấy phép trên có tại https://gcc.gnu.org, https://www.mingw-w64.org và https://wixtoolset.org.
+
+© 2026 Công ty Cổ phần Giải pháp Máy tính Việt Nam — BKRECOVER. Bảo lưu mọi quyền.
+
+==============================================================================
+
+TERMS OF USE AND DISCLAIMER
+CMT Copy — version 2.2
+
+Please read all of the terms below carefully before installing or using this software. By installing, copying or using the software you confirm that you have read, understood and agree to these terms. If you do not agree, do not install or use the software.
+
+1. COPYRIGHT OWNER
+CMT Copy, including the program, source code, user interface, icons and accompanying documents, is the property of:
+Vietnam Computer Solutions JSC (Công ty Cổ phần Giải pháp Máy tính Việt Nam)
+Bach Khoa Data Recovery Center — BKRECOVER
+Website: https://recoverdata.com.vn
+The software is protected by the intellectual property laws of Vietnam and applicable international treaties. All rights not expressly granted here are reserved by the owner.
+
+2. PERMITTED USE
+The software is provided FREE OF CHARGE for RESEARCH AND STUDY purposes only, and not for commercial use. Within that scope you may:
+- Install and use the software on your own computers;
+- Copy and share the unmodified installer free of charge, together with these terms.
+
+3. RESTRICTIONS
+Without the owner's written consent you may not:
+- Use the software for commercial purposes, including selling, renting, offering paid services based on it, or bundling it with a commercial product;
+- Modify, reverse engineer, decompile or disassemble the software, except where the law permits;
+- Remove or alter copyright notices, trademarks or these terms;
+- Distribute modified versions of the software, or bundle it with malicious code.
+
+4. NO WARRANTY
+The software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, continuity or non-infringement. The owner does not warrant that the software is free of errors or will run without interruption.
+
+5. LIMITATION OF LIABILITY
+To the maximum extent permitted by law, the owner, developers and distributors accept no legal liability and owe no compensation for any damage — direct, indirect, incidental, special or consequential — arising from the use of or inability to use the software, or from errors encountered by users, including but not limited to loss, corruption, overwriting or leakage of data; business interruption; damage to hardware or systems; or loss of profits — even if advised of the possibility of such damage.
+
+6. YOUR RESPONSIBILITIES
+- Back up important data before copying, moving or overwriting it;
+- Check the results after copying, especially when using "Move" or "Overwrite";
+- Copy only data you are legally entitled to, and take responsibility for its content and for complying with applicable law.
+
+7. PRIVACY
+The software does not collect or send out any personal data or file contents. Its activity log is stored only on your computer at %LOCALAPPDATA%\CMT Copy\cmtcopy.log.
+
+8. CHANGES AND TERMINATION
+The owner may change these terms in later versions. Your right to use the software ends automatically if you breach these terms; you must then uninstall it and delete all copies.
+
+9. GOVERNING LAW
+These terms are governed by the laws of the Socialist Republic of Vietnam. Disputes are first resolved by negotiation; failing that, by the competent authority under Vietnamese law.
+
+10. CONTACT
+For a commercial license or support, contact BKRECOVER at https://recoverdata.com.vn.
+
+THIRD-PARTY COMPONENTS
+The software is built with the GCC / MinGW-w64 toolchain and statically links the runtime libraries below. Each is copyrighted by its respective authors and governed by its own license:
+- C++ standard library (libstdc++) and GCC support library (libgcc): GNU GPL version 3 with the GCC Runtime Library Exception 3.1, which allows the compiled program to be distributed under terms of the developer's choice.
+- mingw-w64 runtime (CRT): Zope Public License 2.1 and public-domain parts.
+The installer is built with the WiX Toolset and uses the WixUI interface, released under the Microsoft Reciprocal License (MS-RL).
+Full license texts are available at https://gcc.gnu.org, https://www.mingw-w64.org and https://wixtoolset.org.
+
+© 2026 Vietnam Computer Solutions JSC — BKRECOVER. All rights reserved.

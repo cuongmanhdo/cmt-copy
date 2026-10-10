@@ -1,0 +1,521 @@
+# Third-party notices — CMT Copy 2.3.2
+
+CMT Copy is © Vietnam Computer Solutions JSC — BKRECOVER (see `LICENSE.txt`). The program itself is not open
+source. It contains, or its installer contains, the third-party components below; each stays under its own license,
+reproduced here as those licenses require.
+
+CMT Copy là phần mềm thuộc bản quyền của Công ty Cổ phần Giải pháp Máy tính Việt Nam — BKRECOVER (xem `LICENSE.txt`),
+không phải phần mềm mã nguồn mở. Tệp chương trình và bộ cài có chứa các thành phần của bên thứ ba dưới đây; mỗi thành
+phần giữ nguyên giấy phép riêng, được trích nguyên văn theo yêu cầu của chính giấy phép đó.
+
+| Component / Thành phần | Where / Ở đâu | License / Giấy phép |
+|---|---|---|
+| GNU C++ standard library (libstdc++), GCC support library (libgcc) | statically linked into `CMT Copy.exe` | GPL-3.0 with GCC Runtime Library Exception 3.1 |
+| mingw-w64 runtime (CRT: libmingw32, libmingwex) | statically linked into `CMT Copy.exe` | ZPL-2.1, parts public domain |
+| winpthreads (mingw-w64 POSIX threads) | statically linked into `CMT Copy.exe` | MIT; parts BSD-3-Clause (Lockless Inc.) |
+| WiX Toolset v3.14 — WixUI_Minimal dialogs | inside the installer `CMTCopy-2.3.2-x64.msi` | MS-RL |
+
+Windows system libraries (comctl32, shell32, shlwapi, ole32, uxtheme, advapi32, …) are part of Windows and are not
+distributed with CMT Copy. / Các thư viện hệ thống của Windows là một phần của Windows, không được phân phối kèm.
+
+---
+
+## 1. libstdc++ and libgcc — GPL-3.0 with GCC Runtime Library Exception 3.1
+
+CMT Copy is compiled with GCC (MinGW-w64 build, WinLibs) and links these runtime libraries statically. The GCC
+Runtime Library Exception allows the resulting program to be distributed under terms of the developer's choice
+(here: `LICENSE.txt`), because it was produced by an Eligible Compilation Process with GCC and no GPL-incompatible
+software. The libraries' source code is available from https://gcc.gnu.org. Full GPL-3.0 text:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+```
+GCC RUNTIME LIBRARY EXCEPTION
+
+Version 3.1, 31 March 2009
+
+Copyright (C) 2009 Free Software Foundation, Inc. <http://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+This GCC Runtime Library Exception ("Exception") is an additional
+permission under section 7 of the GNU General Public License, version
+3 ("GPLv3"). It applies to a given file (the "Runtime Library") that
+bears a notice placed by the copyright holder of the file stating that
+the file is governed by GPLv3 along with this Exception.
+
+When you use GCC to compile a program, GCC may combine portions of
+certain GCC header files and runtime libraries with the compiled
+program. The purpose of this Exception is to allow compilation of
+non-GPL (including proprietary) programs to use, in this way, the
+header files and runtime libraries covered by this Exception.
+
+0. Definitions.
+
+A file is an "Independent Module" if it either requires the Runtime
+Library for execution after a Compilation Process, or makes use of an
+interface provided by the Runtime Library, but is not otherwise based
+on the Runtime Library.
+
+"GCC" means a version of the GNU Compiler Collection, with or without
+modifications, governed by version 3 (or a specified later version) of
+the GNU General Public License (GPL) with the option of using any
+subsequent versions published by the FSF.
+
+"GPL-compatible Software" is software whose conditions of propagation,
+modification and use would permit combination with GCC in accord with
+the license of GCC.
+
+"Target Code" refers to output from any compiler for a real or virtual
+target processor architecture, in executable form or suitable for
+input to an assembler, loader, linker and/or execution
+phase. Notwithstanding that, Target Code does not include data in any
+format that is used as a compiler intermediate representation, or used
+for producing a compiler intermediate representation.
+
+The "Compilation Process" transforms code entirely represented in
+non-intermediate languages designed for human-written code, and/or in
+Java Virtual Machine byte code, into Target Code. Thus, for example,
+use of source code generators and preprocessors need not be considered
+part of the Compilation Process, since the Compilation Process can be
+understood as starting with the output of the generators or
+preprocessors.
+
+A Compilation Process is "Eligible" if it is done using GCC, alone or
+with other GPL-compatible software, or if it is done without using any
+work based on GCC. For example, using non-GPL-compatible Software to
+optimize any GCC intermediate representations would not qualify as an
+Eligible Compilation Process.
+
+1. Grant of Additional Permission.
+
+You have permission to propagate a work of Target Code formed by
+combining the Runtime Library with Independent Modules, even if such
+propagation would otherwise violate the terms of GPLv3, provided that
+all Target Code was generated by Eligible Compilation Processes. You
+may then convey such a combination under terms of your choice,
+consistent with the licensing of the Independent Modules.
+
+2. No Weakening of GCC Copyleft.
+
+The availability of this Exception does not imply any general
+presumption that third-party software is unaffected by the copyleft
+requirements of the license of GCC.
+```
+
+## 2. mingw-w64 runtime — ZPL-2.1 (parts public domain)
+
+```
+With exception of certain parts that are prominently marked as being
+in the Public Domain, BSD, or LGPL this Software is provided under the
+Zope Public License (ZPL) Version 2.1.
+
+Copyright (c) 2009 - 2013 by the mingw-w64 project
+
+See the AUTHORS file for the list of contributors to the mingw-w64 project.
+
+This license has been certified as open source. It has also been designated
+as GPL compatible by the Free Software Foundation (FSF).
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions in source code must retain the accompanying copyright
+      notice, this list of conditions, and the following disclaimer.
+   2. Redistributions in binary form must reproduce the accompanying
+      copyright notice, this list of conditions, and the following disclaimer
+      in the documentation and/or other materials provided with the
+      distribution.
+   3. Names of the copyright holders must not be used to endorse or promote
+      products derived from this software without prior written permission
+      from the copyright holders.
+   4. The right to distribute this software or to use it for any purpose does
+      not give you the right to use Servicemarks (sm) or Trademarks (tm) of
+      the copyright holders.  Use of them is covered by separate agreement
+      with the copyright holders.
+   5. If any files are modified, you must cause the modified files to carry
+      prominent notices stating that you changed the files and the date of
+      any change.
+
+Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY EXPRESSED
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, 
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+Notices of the mingw-w64 runtime files (`COPYING.MinGW-w64-runtime.txt`):
+
+```
+MinGW-w64 runtime licensing
+***************************
+
+This program or library was built using MinGW-w64 and statically
+linked against the MinGW-w64 runtime. Some parts of the runtime
+are under licenses which require that the copyright and license
+notices are included when distributing the code in binary form.
+These notices are listed below.
+
+
+========================
+Overall copyright notice
+========================
+
+Copyright (c) 2009, 2010, 2011, 2012, 2013 by the mingw-w64 project
+
+This license has been certified as open source. It has also been designated
+as GPL compatible by the Free Software Foundation (FSF).
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+   1. Redistributions in source code must retain the accompanying copyright
+      notice, this list of conditions, and the following disclaimer.
+   2. Redistributions in binary form must reproduce the accompanying
+      copyright notice, this list of conditions, and the following disclaimer
+      in the documentation and/or other materials provided with the
+      distribution.
+   3. Names of the copyright holders must not be used to endorse or promote
+      products derived from this software without prior written permission
+      from the copyright holders.
+   4. The right to distribute this software or to use it for any purpose does
+      not give you the right to use Servicemarks (sm) or Trademarks (tm) of
+      the copyright holders.  Use of them is covered by separate agreement
+      with the copyright holders.
+   5. If any files are modified, you must cause the modified files to carry
+      prominent notices stating that you changed the files and the date of
+      any change.
+
+Disclaimer
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY EXPRESSED
+OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+======================================== 
+getopt, getopt_long, and getop_long_only
+======================================== 
+
+Copyright (c) 2002 Todd C. Miller <Todd.Miller@courtesan.com> 
+ 
+Permission to use, copy, modify, and distribute this software for any 
+purpose with or without fee is hereby granted, provided that the above 
+copyright notice and this permission notice appear in all copies. 
+ 	 
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+Sponsored in part by the Defense Advanced Research Projects
+Agency (DARPA) and Air Force Research Laboratory, Air Force
+Materiel Command, USAF, under agreement number F39502-99-1-0512.
+
+        *       *       *       *       *       *       * 
+
+Copyright (c) 2000 The NetBSD Foundation, Inc.
+All rights reserved.
+
+This code is derived from software contributed to The NetBSD Foundation
+by Dieter Baron and Thomas Klausner.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+
+===============================================================
+gdtoa: Converting between IEEE floating point numbers and ASCII
+===============================================================
+
+The author of this software is David M. Gay.
+
+Copyright (C) 1997, 1998, 1999, 2000, 2001 by Lucent Technologies
+All Rights Reserved
+
+Permission to use, copy, modify, and distribute this software and
+its documentation for any purpose and without fee is hereby
+granted, provided that the above copyright notice appear in all
+copies and that both that the copyright notice and this
+permission notice and warranty disclaimer appear in supporting
+documentation, and that the name of Lucent or any of its entities
+not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior
+permission.
+
+LUCENT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+IN NO EVENT SHALL LUCENT OR ANY OF ITS ENTITIES BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
+IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
+
+        *       *       *       *       *       *       *
+
+The author of this software is David M. Gay.
+
+Copyright (C) 2005 by David M. Gay
+All Rights Reserved
+
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+provided that the above copyright notice appear in all copies and that
+both that the copyright notice and this permission notice and warranty
+disclaimer appear in supporting documentation, and that the name of
+the author or any of his current or former employers not be used in
+advertising or publicity pertaining to distribution of the software
+without specific, written prior permission.
+
+THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.  IN
+NO EVENT SHALL THE AUTHOR OR ANY OF HIS CURRENT OR FORMER EMPLOYERS BE
+LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY
+DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+SOFTWARE.
+
+        *       *       *       *       *       *       *
+
+The author of this software is David M. Gay.
+
+Copyright (C) 2004 by David M. Gay.
+All Rights Reserved
+Based on material in the rest of /netlib/fp/gdota.tar.gz,
+which is copyright (C) 1998, 2000 by Lucent Technologies.
+
+Permission to use, copy, modify, and distribute this software and
+its documentation for any purpose and without fee is hereby
+granted, provided that the above copyright notice appear in all
+copies and that both that the copyright notice and this
+permission notice and warranty disclaimer appear in supporting
+documentation, and that the name of Lucent or any of its entities
+not be used in advertising or publicity pertaining to
+distribution of the software without specific, written prior
+permission.
+
+LUCENT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS.
+IN NO EVENT SHALL LUCENT OR ANY OF ITS ENTITIES BE LIABLE FOR ANY
+SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER
+IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
+
+
+=========================
+Parts of the math library
+=========================
+
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+
+Developed at SunSoft, a Sun Microsystems, Inc. business.
+Permission to use, copy, modify, and distribute this
+software is freely granted, provided that this notice
+is preserved.
+
+        *       *       *       *       *       *       *
+
+Copyright (C) 1993 by Sun Microsystems, Inc. All rights reserved.
+
+Developed at SunPro, a Sun Microsystems, Inc. business.
+Permission to use, copy, modify, and distribute this
+software is freely granted, provided that this notice
+is preserved.
+
+        *       *       *       *       *       *       *
+
+FIXME: Cephes math lib
+Copyright (C) 1984-1998 Stephen L. Moshier
+
+It sounds vague, but as to be found at
+<http://lists.debian.org/debian-legal/2004/12/msg00295.html>, it gives an
+impression that the author could be willing to give an explicit
+permission to distribute those files e.g. under a BSD style license. So
+probably there is no problem here, although it could be good to get a
+permission from the author and then add a license into the Cephes files
+in MinGW runtime. At least on follow-up it is marked that debian sees the
+version a-like BSD one. As MinGW.org (where those cephes parts are coming
+from) distributes them now over 6 years, it should be fine.
+
+=================================================
+Some string, memory and time conversion functions
+=================================================
+
+Copyright © 2005-2020 Rich Felker, et al.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+===================================
+Headers and IDLs imported from Wine
+===================================
+
+Some header and IDL files were imported from the Wine project. These files
+are prominent maked in source. Their copyright belongs to contributors and
+they are distributed under LGPL license.
+
+Disclaimer
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+```
+
+## 3. winpthreads — MIT, parts BSD-3-Clause
+
+```
+Copyright (c) 2011 mingw-w64 project
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+
+/*
+ * Parts of this library are derived by:
+ *
+ * Posix Threads library for Microsoft Windows
+ *
+ * Use at own risk, there is no implied warranty to this code.
+ * It uses undocumented features of Microsoft Windows that can change
+ * at any time in the future.
+ *
+ * (C) 2010 Lockless Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ *
+ *  * Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *  * Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *  * Neither the name of Lockless Inc. nor the names of its contributors may be
+ *    used to endorse or promote products derived from this software without
+ *    specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AN
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+ * BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+```
+
+## 4. WiX Toolset v3.14 — WixUI_Minimal (in the MSI installer only)
+
+The installer uses the standard, unmodified `WixUI_Minimal` dialog set of WiX Toolset v3.14 (the license page and
+progress dialogs). Its source code is available at https://github.com/wixtoolset/wix3 (`src/ext/UIExtension`,
+release v3.14). Only the installer contains it; `CMT Copy.exe` does not.
+
+```
+Copyright (c) .NET Foundation and contributors.
+This software is released under the Microsoft Reciprocal License (MS-RL) (the "License"); you may not use the software except in compliance with the License.
+
+The text of the Microsoft Reciprocal License (MS-RL) can be found online at:
+ http://opensource.org/licenses/ms-rl
+
+
+Microsoft Reciprocal License (MS-RL)
+
+This license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.
+
+1. Definitions
+ The terms "reproduce," "reproduction," "derivative works," and "distribution" have the same meaning here as under U.S. copyright law.
+ A "contribution" is the original software, or any additions or changes to the software.
+ A "contributor" is any person that distributes its contribution under this license.
+ "Licensed patents" are a contributor's patent claims that read directly on its contribution.
+
+2. Grant of Rights
+ (A) Copyright Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free copyright license to reproduce its contribution, prepare derivative works of its contribution, and distribute its contribution or any derivative works that you create.
+ (B) Patent Grant- Subject to the terms of this license, including the license conditions and limitations in section 3, each contributor grants you a non-exclusive, worldwide, royalty-free license under its licensed patents to make, have made, use, sell, offer for sale, import, and/or otherwise dispose of its contribution in the software or derivative works of the contribution in the software.
+
+3. Conditions and Limitations
+ (A) Reciprocal Grants- For any file you distribute that contains code from the software (in source code or binary format), you must provide recipients the source code to that file along with a copy of this license, which license will govern that file. You may license other files that are entirely your own work and do not contain code from the software under any terms you choose.
+ (B) No Trademark License- This license does not grant you rights to use any contributors' name, logo, or trademarks.
+ (C) If you bring a patent claim against any contributor over patents that you claim are infringed by the software, your patent license from such contributor to the software ends automatically.
+ (D) If you distribute any portion of the software, you must retain all copyright, patent, trademark, and attribution notices that are present in the software.
+ (E) If you distribute any portion of the software in source code form, you may do so only under this license by including a complete copy of this license with your distribution. If you distribute any portion of the software in compiled or object code form, you may only do so under a license that complies with this license.
+ (F) The software is licensed "as-is." You bear the risk of using it. The contributors give no express warranties, guarantees or conditions. You may have additional consumer rights under your local laws which this license cannot change. To the extent permitted under your local laws, the contributors exclude the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+```
