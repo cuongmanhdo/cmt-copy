@@ -47,8 +47,12 @@ chọn *More info → Run anyway* nếu bạn tải từ trang Releases này và
 Khi chép hàng triệu tệp, Windows Defender có thể **nhận nhầm** CMT Copy là mã độc theo hành vi
 (đã gặp: `Behavior:Win32/Filecoder.DD`) và dừng phần mềm giữa chừng. Dữ liệu không bị hỏng (ghi an toàn), tác vụ chạy
 tiếp được khi mở lại. Để tránh, thêm loại trừ: *Windows Security → Virus & threat protection → Manage settings →
-Exclusions → Add an exclusion → Process* → `CMT Copy.exe`. Có thể báo nhận nhầm cho Microsoft tại
-https://www.microsoft.com/wdsi/filesubmission.
+Exclusions → Add an exclusion → Process* → `CMT Copy.exe`.
+
+**Đã báo nhận nhầm cho Microsoft** ngày 10/10/2026 qua Microsoft Security Intelligence, mã hồ sơ
+`c335abff-816f-49a6-8f73-6cc4e9cb6035` (tệp `CMT Copy.exe` 2.3.2, SHA-256
+`2229d17b1fec13759f044e15be54abfffed6b03bb3451dac67bd097efdfa528e`). Trạng thái: **đang chờ Microsoft phân tích** —
+mục này sẽ được cập nhật khi có kết quả.
 
 ## Quyền riêng tư
 
@@ -83,6 +87,9 @@ full destinations, and can continue a job at another destination. No runtime nee
   with `SHA256SUMS.txt`.
 - **Not code-signed yet**: SmartScreen may warn on first run. Windows Defender may falsely flag it
   (`Behavior:Win32/Filecoder.DD`) during very large jobs; add a process exclusion for `CMT Copy.exe` if that happens.
+  Reported to Microsoft as a false positive on 2026-10-10, submission ID `c335abff-816f-49a6-8f73-6cc4e9cb6035`
+  (CMT Copy.exe 2.3.2, SHA-256 `2229d17b1fec13759f044e15be54abfffed6b03bb3451dac67bd097efdfa528e`) — awaiting
+  Microsoft's analysis.
 - **Privacy**: nothing is collected or sent anywhere; the log stays at `%LOCALAPPDATA%\CMT Copy\cmtcopy.log`.
 - **License**: proprietary freeware for research and study, non-commercial — © 2026 Vietnam Computer Solutions JSC —
   BKRECOVER, all rights reserved. See [LICENSE.txt](LICENSE.txt). This repository holds binaries and documentation
