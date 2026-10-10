@@ -1,99 +1,75 @@
+**English** | [Tiếng Việt](README.vi.md)
+
 # CMT Copy
 
-Công cụ sao chép / di chuyển tệp dung lượng lớn cho Windows 10/11 (64-bit), phát triển bởi
-**BKRECOVER — Trung tâm Khôi phục Dữ liệu Bách Khoa** (Công ty Cổ phần Giải pháp Máy tính Việt Nam).
+A file copy / move tool for large jobs on Windows 10/11 (64-bit), developed by
+**BKRECOVER — Bach Khoa Data Recovery Center** (Vietnam Computer Solutions JSC).
 Website: https://recoverdata.com.vn
 
-*A file copy / move tool for large jobs on Windows 10/11 (64-bit), by BKRECOVER — Vietnam Computer Solutions JSC.
-English summary below.*
+> This repository holds **installers and documentation only**. CMT Copy is free software for research and study,
+> non-commercial, and **not open source**; the source code is not published. See [LICENSE.txt](LICENSE.txt).
 
-> Repo này chỉ chứa **bộ cài và tài liệu**. CMT Copy là phần mềm miễn phí cho mục đích nghiên cứu và học tập,
-> phi thương mại, **không phải phần mềm mã nguồn mở**; mã nguồn không được công bố. Xem [LICENSE.txt](LICENSE.txt).
+## Download
 
-## Tải về
+Go to **[Releases](../../releases)** — latest version **2.3.2**:
 
-Vào mục **[Releases](../../releases)**, bản mới nhất **2.3.2**:
-
-| Tệp | Dùng cho |
+| File | Use |
 |---|---|
-| `CMTCopy-2.3.2-x64.msi` | Bộ cài: Start Menu, Desktop, menu chuột phải "Dán bằng CMT Copy" trong Explorer. Nâng cấp được từ các bản 1.x / 2.x. |
-| `CMTCopy-2.3.2-portable.zip` | Bản chạy ngay: `CMT Copy.exe` cùng điều khoản và thông báo bên thứ ba. |
-| `SHA256SUMS.txt` | Mã SHA-256 để kiểm tra tệp tải về không bị thay đổi. |
+| `CMTCopy-2.3.2-x64.msi` | Installer: Start Menu, Desktop, and a "Paste with CMT Copy" item in Explorer's right-click menu. Upgrades 1.x / 2.x. |
+| `CMTCopy-2.3.2-portable.zip` | Runs without installing: `CMT Copy.exe` with the terms of use and third-party notices. |
+| `SHA256SUMS.txt` | SHA-256 checksums to confirm the downloads were not altered. |
 
-Không cần cài .NET hay runtime nào khác. Cài im lặng: `msiexec /i CMTCopy-2.3.2-x64.msi /qn`.
+No .NET or other runtime needed. Silent install: `msiexec /i CMTCopy-2.3.2-x64.msi /qn`.
 
-Kiểm tra tệp tải về (PowerShell):
+Check a download (PowerShell):
 
 ```powershell
 Get-FileHash .\CMTCopy-2.3.2-x64.msi -Algorithm SHA256
 ```
 
-## Tính năng chính (2.3.2)
+## Main features (2.3.2)
 
-- Dán bằng CMT Copy từ Explorer (Ctrl+C / Ctrl+X rồi chuột phải thư mục đích), kéo thả, nhiều tác vụ song song hoặc
-  xếp hàng chờ nhau.
-- Đường dẫn dài trên 260 ký tự, tên tiếng Việt; khi gặp tệp trùng: hỏi / ghi đè / bỏ qua / giữ cả hai.
-- **Ghi an toàn**: tắt ngang hoặc mất điện không để lại tệp hỏng dưới tên thật.
-- **Lưu tiến trình**: đóng phần mềm, mất điện hay khởi động lại máy vẫn chạy tiếp được, bỏ qua tệp đã chép.
-- Mất kết nối ổ mạng / NAS: tự chờ và chép tiếp. Ổ đích đầy: tạm dừng chờ, hoặc **chạy tiếp sang đích khác** (bỏ qua
-  tệp đã có ở đích cũ).
-- Danh sách lỗi có lý do, thử lại tệp lỗi; nhật ký ghi cả thao tác của người dùng.
+- Paste with CMT Copy from Explorer (Ctrl+C / Ctrl+X, then right-click the destination folder), drag and drop,
+  several jobs in parallel or queued one after another.
+- Paths longer than 260 characters, Unicode names; duplicate files: ask / overwrite / skip / keep both.
+- **Safe write**: a crash or power cut never leaves a broken file under its real name.
+- **Saved jobs**: after closing the app, a power cut or a restart, jobs continue and skip files already copied.
+- Lost network drive / NAS: waits and resumes by itself. Full destination: pauses and waits, or **continue at another
+  destination** (files already at the old one are skipped).
+- Error list with reasons and "retry failed files"; the log also records user actions.
+- English and Vietnamese interface (Options → Language).
 
-## Lưu ý về Windows Defender / SmartScreen
+## Windows Defender / SmartScreen
 
-CMT Copy **chưa được ký số**. Khi chạy lần đầu, Windows SmartScreen có thể cảnh báo ("Windows protected your PC") —
-chọn *More info → Run anyway* nếu bạn tải từ trang Releases này và mã SHA-256 khớp.
+CMT Copy is **not code-signed yet**. On first run Windows SmartScreen may warn ("Windows protected your PC") — choose
+*More info → Run anyway* if you downloaded it from this Releases page and the SHA-256 matches.
 
-Khi chép hàng triệu tệp, Windows Defender có thể **nhận nhầm** CMT Copy là mã độc theo hành vi
-(đã gặp: `Behavior:Win32/Filecoder.DD`) và dừng phần mềm giữa chừng. Dữ liệu không bị hỏng (ghi an toàn), tác vụ chạy
-tiếp được khi mở lại. Để tránh, thêm loại trừ: *Windows Security → Virus & threat protection → Manage settings →
-Exclusions → Add an exclusion → Process* → `CMT Copy.exe`.
+When copying millions of files, Windows Defender may **falsely flag** CMT Copy by its behavior
+(seen: `Behavior:Win32/Filecoder.DD`) and stop it mid-job. No data is damaged (safe write), and the job continues when
+the app is opened again. To avoid it, add an exclusion: *Windows Security → Virus & threat protection → Manage
+settings → Exclusions → Add an exclusion → Process* → `CMT Copy.exe`.
 
-**Đã báo nhận nhầm cho Microsoft** ngày 10/10/2026 qua Microsoft Security Intelligence, mã hồ sơ
-`c335abff-816f-49a6-8f73-6cc4e9cb6035` (tệp `CMT Copy.exe` 2.3.2, SHA-256
-`2229d17b1fec13759f044e15be54abfffed6b03bb3451dac67bd097efdfa528e`). Trạng thái: **đang chờ Microsoft phân tích** —
-mục này sẽ được cập nhật khi có kết quả.
+**Reported to Microsoft as a false positive** on 2026-10-10 through Microsoft Security Intelligence, submission ID
+`c335abff-816f-49a6-8f73-6cc4e9cb6035` (`CMT Copy.exe` 2.3.2, SHA-256
+`2229d17b1fec13759f044e15be54abfffed6b03bb3451dac67bd097efdfa528e`). Status: **awaiting Microsoft's analysis** — this
+section will be updated with the result.
 
-## Quyền riêng tư
+## Privacy
 
-CMT Copy không thu thập và không gửi ra ngoài bất kỳ dữ liệu nào. Nhật ký chỉ lưu trên máy:
+CMT Copy collects nothing and sends nothing anywhere. Its log stays on your computer:
 `%LOCALAPPDATA%\CMT Copy\cmtcopy.log`.
 
-## Bản quyền và tuân thủ
+## Copyright and compliance
 
-- **CMT Copy** © 2026 Công ty Cổ phần Giải pháp Máy tính Việt Nam — BKRECOVER. Bảo lưu mọi quyền. Được cung cấp miễn
-  phí cho mục đích nghiên cứu và học tập, phi thương mại, theo [LICENSE.txt](LICENSE.txt) (cũng là điều khoản người
-  dùng đồng ý trong bộ cài). Không được bán, sửa đổi, dịch ngược hay phân phối bản đã chỉnh sửa khi chưa có chấp
-  thuận bằng văn bản.
-- **Thành phần của bên thứ ba**: tệp chương trình liên kết tĩnh libstdc++ / libgcc (GPL-3.0 kèm GCC Runtime Library
-  Exception 3.1), mingw-w64 runtime (ZPL-2.1) và winpthreads (MIT); bộ cài dùng giao diện WixUI của WiX Toolset
-  (MS-RL). Các thành phần này giữ nguyên giấy phép của chúng; toàn văn giấy phép và thông báo bản quyền có trong
-  [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) và được kèm trong bản portable. Chúng tôi tuân thủ đầy đủ các điều
-  kiện của những giấy phép đó.
-- Repo không chứa dữ liệu của khách hàng hay bất kỳ dữ liệu cá nhân nào.
-- Người dùng tự chịu trách nhiệm chỉ sao chép dữ liệu mà mình có quyền hợp pháp (điều 6 của điều khoản).
+- **CMT Copy** © 2026 Vietnam Computer Solutions JSC — BKRECOVER. All rights reserved. Provided free of charge for
+  research and study, non-commercial, under [LICENSE.txt](LICENSE.txt) (the same terms users accept in the
+  installer). Selling, modifying, reverse engineering or distributing modified copies requires written permission.
+- **Third-party components**: the program statically links libstdc++ / libgcc (GPL-3.0 with the GCC Runtime Library
+  Exception 3.1), the mingw-w64 runtime (ZPL-2.1) and winpthreads (MIT); the installer uses the WixUI dialogs of the
+  WiX Toolset (MS-RL). These components keep their own licenses; the full license texts and copyright notices are in
+  [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and inside the portable zip. We comply with all conditions of
+  those licenses.
+- This repository contains no customer data and no personal data.
+- Users are responsible for copying only data they are legally entitled to (section 6 of the terms).
 
-Liên hệ về bản quyền / báo vi phạm: https://recoverdata.com.vn
-
----
-
-## English
-
-**CMT Copy** copies and moves large amounts of files on Windows 10/11 x64: paste from Explorer, parallel or queued
-jobs, long paths, duplicate handling, crash-safe writes, jobs saved across restarts, waits for lost network drives and
-full destinations, and can continue a job at another destination. No runtime needed.
-
-- **Download**: see [Releases](../../releases) — `CMTCopy-2.3.2-x64.msi` (installer) or `CMTCopy-2.3.2-portable.zip`,
-  with `SHA256SUMS.txt`.
-- **Not code-signed yet**: SmartScreen may warn on first run. Windows Defender may falsely flag it
-  (`Behavior:Win32/Filecoder.DD`) during very large jobs; add a process exclusion for `CMT Copy.exe` if that happens.
-  Reported to Microsoft as a false positive on 2026-10-10, submission ID `c335abff-816f-49a6-8f73-6cc4e9cb6035`
-  (CMT Copy.exe 2.3.2, SHA-256 `2229d17b1fec13759f044e15be54abfffed6b03bb3451dac67bd097efdfa528e`) — awaiting
-  Microsoft's analysis.
-- **Privacy**: nothing is collected or sent anywhere; the log stays at `%LOCALAPPDATA%\CMT Copy\cmtcopy.log`.
-- **License**: proprietary freeware for research and study, non-commercial — © 2026 Vietnam Computer Solutions JSC —
-  BKRECOVER, all rights reserved. See [LICENSE.txt](LICENSE.txt). This repository holds binaries and documentation
-  only; the source code is not published.
-- **Third-party components** (libstdc++/libgcc under GPL-3.0 with the GCC Runtime Library Exception, mingw-w64 runtime
-  under ZPL-2.1, winpthreads under MIT, WiX WixUI under MS-RL) keep their own licenses; full texts and copyright
-  notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and inside the portable zip.
+Copyright questions / infringement reports: https://recoverdata.com.vn
