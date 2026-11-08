@@ -19,6 +19,8 @@ Vào mục **[Releases](../../releases)**, bản mới nhất **2.3.3**:
 | `CMTCopy-2.3.3-portable.zip` | Bản chạy ngay: `CMT Copy.exe` cùng điều khoản và thông báo bên thứ ba. |
 | `SHA256SUMS.txt` | Mã SHA-256 để kiểm tra tệp tải về không bị thay đổi. |
 
+Bản **Beta 3.0.2** (chép đa luồng, nhanh hơn với nhiều tệp nhỏ) cũng có ở trang Releases, đánh dấu *Pre-release*. Quay lại 2.3.x từ 3.0: gỡ 3.0 trước.
+
 Không cần cài .NET hay runtime nào khác. Cài im lặng: `msiexec /i CMTCopy-2.3.3-x64.msi /qn`.
 
 Kiểm tra tệp tải về (PowerShell):

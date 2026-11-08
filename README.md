@@ -19,6 +19,8 @@ Go to **[Releases](../../releases)** — latest version **2.3.3**:
 | `CMTCopy-2.3.3-portable.zip` | Runs without installing: `CMT Copy.exe` with the terms of use and third-party notices. |
 | `SHA256SUMS.txt` | SHA-256 checksums to confirm the downloads were not altered. |
 
+**Beta 3.0.2** (multi-threaded copying, faster with many small files) is also on the Releases page, marked *Pre-release*. Going back from 3.0 to 2.3.x: uninstall 3.0 first.
+
 No .NET or other runtime needed. Silent install: `msiexec /i CMTCopy-2.3.3-x64.msi /qn`.
 
 Check a download (PowerShell):
