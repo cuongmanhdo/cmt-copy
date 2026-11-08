@@ -11,23 +11,23 @@ Website: https://recoverdata.com.vn
 
 ## Download
 
-Go to **[Releases](../../releases)** — latest version **2.3.2**:
+Go to **[Releases](../../releases)** — latest version **2.3.3**:
 
 | File | Use |
 |---|---|
-| `CMTCopy-2.3.2-x64.msi` | Installer: Start Menu, Desktop, and a "Paste with CMT Copy" item in Explorer's right-click menu. Upgrades 1.x / 2.x. |
-| `CMTCopy-2.3.2-portable.zip` | Runs without installing: `CMT Copy.exe` with the terms of use and third-party notices. |
+| `CMTCopy-2.3.3-x64.msi` | Installer: Start Menu, Desktop, and a "Paste with CMT Copy" item in Explorer's right-click menu. Upgrades 1.x / 2.x. |
+| `CMTCopy-2.3.3-portable.zip` | Runs without installing: `CMT Copy.exe` with the terms of use and third-party notices. |
 | `SHA256SUMS.txt` | SHA-256 checksums to confirm the downloads were not altered. |
 
-No .NET or other runtime needed. Silent install: `msiexec /i CMTCopy-2.3.2-x64.msi /qn`.
+No .NET or other runtime needed. Silent install: `msiexec /i CMTCopy-2.3.3-x64.msi /qn`.
 
 Check a download (PowerShell):
 
 ```powershell
-Get-FileHash .\CMTCopy-2.3.2-x64.msi -Algorithm SHA256
+Get-FileHash .\CMTCopy-2.3.3-x64.msi -Algorithm SHA256
 ```
 
-## Main features (2.3.2)
+## Main features (2.3.3)
 
 - Paste with CMT Copy from Explorer (Ctrl+C / Ctrl+X, then right-click the destination folder), drag and drop,
   several jobs in parallel or queued one after another.
@@ -36,6 +36,8 @@ Get-FileHash .\CMTCopy-2.3.2-x64.msi -Algorithm SHA256
 - **Saved jobs**: after closing the app, a power cut or a restart, jobs continue and skip files already copied.
 - Lost network drive / NAS: waits and resumes by itself. Full destination: pauses and waits, or **continue at another
   destination** (files already at the old one are skipped).
+- Failing drive (e.g. a USB disk that keeps dropping out): after 10 failed files in a row the job waits for the drive
+  and copies those files again, instead of failing every file.
 - Error list with reasons and "retry failed files"; the log also records user actions.
 - English and Vietnamese interface (Options → Language).
 

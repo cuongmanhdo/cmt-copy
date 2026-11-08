@@ -1,4 +1,4 @@
-# Third-party notices — CMT Copy 2.3.2
+# Third-party notices — CMT Copy 2.3.3
 
 CMT Copy is © Vietnam Computer Solutions JSC — BKRECOVER (see `LICENSE.txt`). The program itself is not open
 source. It contains, or its installer contains, the third-party components below; each stays under its own license,
@@ -13,7 +13,7 @@ phần giữ nguyên giấy phép riêng, được trích nguyên văn theo yêu
 | GNU C++ standard library (libstdc++), GCC support library (libgcc) | statically linked into `CMT Copy.exe` | GPL-3.0 with GCC Runtime Library Exception 3.1 |
 | mingw-w64 runtime (CRT: libmingw32, libmingwex) | statically linked into `CMT Copy.exe` | ZPL-2.1, parts public domain |
 | winpthreads (mingw-w64 POSIX threads) | statically linked into `CMT Copy.exe` | MIT; parts BSD-3-Clause (Lockless Inc.) |
-| WiX Toolset v3.14 — WixUI_Minimal dialogs | inside the installer `CMTCopy-2.3.2-x64.msi` | MS-RL |
+| WiX Toolset v3.14 — WixUI_Minimal dialogs | inside the installer `CMTCopy-2.3.3-x64.msi` | MS-RL |
 
 Windows system libraries (comctl32, shell32, shlwapi, ole32, uxtheme, advapi32, …) are part of Windows and are not
 distributed with CMT Copy. / Các thư viện hệ thống của Windows là một phần của Windows, không được phân phối kèm.

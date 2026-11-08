@@ -1,4 +1,4 @@
-﻿CMT Copy 2.3.2 — Điều khoản sử dụng / Terms of Use
+﻿CMT Copy 2.3.3 — Điều khoản sử dụng / Terms of Use
 Bản tiếng Việt trước, bản tiếng Anh sau. Vietnamese first, English below.
 Đây là nguyên văn điều khoản người dùng phải đồng ý khi cài đặt và khi chạy lần đầu.
 This is the exact text users accept in the installer and on first run.
@@ -57,8 +57,9 @@ THÀNH PHẦN CỦA BÊN THỨ BA
 Phần mềm được biên dịch bằng bộ công cụ GCC / MinGW-w64 và liên kết tĩnh các thư viện thời chạy dưới đây. Mỗi thư viện thuộc bản quyền của tác giả tương ứng và tuân theo giấy phép riêng:
 - Thư viện chuẩn C++ (libstdc++) và thư viện hỗ trợ GCC (libgcc): GNU GPL phiên bản 3 kèm GCC Runtime Library Exception 3.1. Điều khoản ngoại lệ này cho phép phân phối chương trình đã biên dịch theo điều khoản do nhà phát triển lựa chọn.
 - Thư viện thời chạy mingw-w64 (CRT): Zope Public License 2.1 và các phần thuộc phạm vi công cộng.
+- Thư viện luồng winpthreads của mingw-w64: giấy phép MIT, Copyright (c) 2011 mingw-w64 project; một phần theo giấy phép BSD 3 điều khoản, (C) 2010 Lockless Inc.
 Bộ cài đặt được tạo bằng WiX Toolset và sử dụng giao diện WixUI, phát hành theo Microsoft Reciprocal License (MS-RL).
-Văn bản đầy đủ của các giấy phép trên có tại https://gcc.gnu.org, https://www.mingw-w64.org và https://wixtoolset.org.
+Toàn văn các giấy phép và thông báo bản quyền trên có trong tệp THIRD_PARTY_NOTICES.txt đặt cùng thư mục với chương trình, và tại https://gcc.gnu.org, https://www.mingw-w64.org và https://wixtoolset.org.
 
 © 2026 Công ty Cổ phần Giải pháp Máy tính Việt Nam — BKRECOVER. Bảo lưu mọi quyền.
 
@@ -115,7 +116,8 @@ THIRD-PARTY COMPONENTS
 The software is built with the GCC / MinGW-w64 toolchain and statically links the runtime libraries below. Each is copyrighted by its respective authors and governed by its own license:
 - C++ standard library (libstdc++) and GCC support library (libgcc): GNU GPL version 3 with the GCC Runtime Library Exception 3.1, which allows the compiled program to be distributed under terms of the developer's choice.
 - mingw-w64 runtime (CRT): Zope Public License 2.1 and public-domain parts.
+- mingw-w64 winpthreads threading library: MIT License, Copyright (c) 2011 mingw-w64 project; parts under the 3-clause BSD License, (C) 2010 Lockless Inc.
 The installer is built with the WiX Toolset and uses the WixUI interface, released under the Microsoft Reciprocal License (MS-RL).
-Full license texts are available at https://gcc.gnu.org, https://www.mingw-w64.org and https://wixtoolset.org.
+The full license texts and copyright notices are in THIRD_PARTY_NOTICES.txt next to the program, and at https://gcc.gnu.org, https://www.mingw-w64.org and https://wixtoolset.org.
 
 © 2026 Vietnam Computer Solutions JSC — BKRECOVER. All rights reserved.

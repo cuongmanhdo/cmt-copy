@@ -11,23 +11,23 @@ Website: https://recoverdata.com.vn
 
 ## Tải về
 
-Vào mục **[Releases](../../releases)**, bản mới nhất **2.3.2**:
+Vào mục **[Releases](../../releases)**, bản mới nhất **2.3.3**:
 
 | Tệp | Dùng cho |
 |---|---|
-| `CMTCopy-2.3.2-x64.msi` | Bộ cài: Start Menu, Desktop, menu chuột phải "Dán bằng CMT Copy" trong Explorer. Nâng cấp được từ các bản 1.x / 2.x. |
-| `CMTCopy-2.3.2-portable.zip` | Bản chạy ngay: `CMT Copy.exe` cùng điều khoản và thông báo bên thứ ba. |
+| `CMTCopy-2.3.3-x64.msi` | Bộ cài: Start Menu, Desktop, menu chuột phải "Dán bằng CMT Copy" trong Explorer. Nâng cấp được từ các bản 1.x / 2.x. |
+| `CMTCopy-2.3.3-portable.zip` | Bản chạy ngay: `CMT Copy.exe` cùng điều khoản và thông báo bên thứ ba. |
 | `SHA256SUMS.txt` | Mã SHA-256 để kiểm tra tệp tải về không bị thay đổi. |
 
-Không cần cài .NET hay runtime nào khác. Cài im lặng: `msiexec /i CMTCopy-2.3.2-x64.msi /qn`.
+Không cần cài .NET hay runtime nào khác. Cài im lặng: `msiexec /i CMTCopy-2.3.3-x64.msi /qn`.
 
 Kiểm tra tệp tải về (PowerShell):
 
 ```powershell
-Get-FileHash .\CMTCopy-2.3.2-x64.msi -Algorithm SHA256
+Get-FileHash .\CMTCopy-2.3.3-x64.msi -Algorithm SHA256
 ```
 
-## Tính năng chính (2.3.2)
+## Tính năng chính (2.3.3)
 
 - Dán bằng CMT Copy từ Explorer (Ctrl+C / Ctrl+X rồi chuột phải thư mục đích), kéo thả, nhiều tác vụ song song hoặc
   xếp hàng chờ nhau.
@@ -36,6 +36,8 @@ Get-FileHash .\CMTCopy-2.3.2-x64.msi -Algorithm SHA256
 - **Lưu tiến trình**: đóng phần mềm, mất điện hay khởi động lại máy vẫn chạy tiếp được, bỏ qua tệp đã chép.
 - Mất kết nối ổ mạng / NAS: tự chờ và chép tiếp. Ổ đích đầy: tạm dừng chờ, hoặc **chạy tiếp sang đích khác** (bỏ qua
   tệp đã có ở đích cũ).
+- Ổ đĩa trục trặc (ví dụ ổ USB chập chờn): 10 tệp liên tiếp lỗi thì tạm dừng chờ ổ hoạt động lại rồi chép lại các tệp
+  đó, thay vì báo lỗi hàng loạt.
 - Danh sách lỗi có lý do, thử lại tệp lỗi; nhật ký ghi cả thao tác của người dùng.
 - Giao diện tiếng Việt và tiếng Anh (Tùy chọn → Ngôn ngữ / Language).
 
